@@ -35,7 +35,7 @@
                             aria-expanded="false">Pages<span class="caret"></span></a>
                         <ul class="dropdown-menu drop_3" role="menu">
                             <li><a href="register.html">Register</a></li>
-                            <li><a class="border_none" href="login.html">Login</a></li>
+                            <li><a class="border_none" href="{{ route('login') }}">Login</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -61,8 +61,8 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="m_tag button mgt" href="{{ route('dashboard') }}">
-                            Dashboard
+                        <a class="m_tag button mgt" href="{{ route('login') }}">
+                            Login
                             <i class="fa fa-long-arrow-right"></i>
                         </a>
                     </li>

@@ -24,6 +24,7 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('/AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('AdminLTE') }}/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     @stack('css_vendor')
 
     <!-- Theme style -->
@@ -42,6 +43,18 @@
             font-size: .6rem;
             font-weight: bold;
             color: #888;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        a:hover {
+            color: #b51616;
+            text-decoration: none;
+            background-color: transparent;
         }
     </style>
 
@@ -78,7 +91,6 @@
                 </div>
             </div>
 
-
             <section class="content">
                 <div class="container-fluid">
 
@@ -90,6 +102,7 @@
         </div>
 
         @include('layouts.partials.footer')
+
         </aside>
 
     </div>
@@ -121,6 +134,8 @@
 
     @stack('scripts_vendor')
 
+
+    <script src="{{ asset('AdminLTE') }}/plugins/sweetalert2/sweetalert2.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('/AdminLTE/dist/js/adminlte.js') }}"></script>
     <script src="{{ asset('/js/custom.js') }}"></script>

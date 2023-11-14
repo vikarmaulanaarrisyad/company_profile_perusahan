@@ -1,48 +1,81 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+@extends('layouts.master')
 
-        <x-validation-errors class="mb-4" />
+@section('title', 'Login')
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+@section('content')
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-md-flex col-md-6 col-lg-7 bg-image"></div>
+
+            <div class="col-md-6 col-lg-5">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ asset('assets/image/evoting.jpg') }}" alt="" class="w-50 mb-4"
+                                        style="margin-left: auto; margin-right: auto;">
+                                </a>
+                                <h4 class="login-heading text-bold text-center">
+                                    {{ $setting->company_name ?? '' }}</h4>
+                                <h4 class="login-heading text-bold text-center mb-4">Company Profile</h4>
+                                <p>{{ $setting->short_description ?? '' }}</p>
+                                {{-- Form --}}
+                                <form action="{{ route('login') }}" method="post">
+                                    @csrf
+
+                                    <div class="form-group mb-3">
+                                        <label for="auth">Username</label>
+                                        <input type="text" class="form-control @error('auth') is-invalid @enderror"
+                                            id="auth" name="auth" value="{{ old('auth') }}"
+                                            placeholder="Masukan username" autocomplete="off">
+
+                                        @error('auth')
+                                            <span class="invalid-feedback">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror"
+                                            id="password" name="password" autocomplete="off"
+                                            placeholder="Masukan password">
+
+                                        @error('password')
+                                            <span class="invalid-feedback">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group d-flex justify-content-between align-items-center mb-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input form-checkbox"
+                                                id="customCheck1">
+                                            <label for="customCheck1" class="custom-control-label text-muted">show
+                                                password</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <button class="btn btn-lg btn-primary btn-login mb-2 btn-block">
+                                            <i class="fas fa-sign-in-alt"></i> Masuk
+                                        </button>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <div class="text-muted text-sm">
+                                            <p class="text-sm"><strong>NB</strong>: Copyright
+                                                {{ $setting->company_name ?? '' }}</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        @endif
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+        </div>
+    </div>
+@endsection
