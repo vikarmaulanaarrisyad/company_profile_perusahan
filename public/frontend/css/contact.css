@@ -1,0 +1,81 @@
+/*
+Template Name: Deli Comp
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************contact****************/
+#contact{
+padding-top:40px;
+padding-bottom:40px; 
+ }
+.contact_1l{
+background:#f4f4f4; 
+padding:35px 40px 40px 40px;
+min-height:485px; 
+ }
+.contact_1li .form-control{
+background:#fff; 
+box-shadow:none;
+font-size:16px;
+height:50px;
+margin-top:20px;
+border:none;
+ }
+.contact_1li .form_1{
+height:150px; 
+ }
+.contact_1r{
+background:#1F3F6B;
+padding:35px 40px 40px 40px;
+min-height:485px;  
+ }
+.contact_1ri span {
+display: inline-block;
+background: #F69323;
+color: #fff;
+width: 60px;
+height: 60px;
+line-height: 58px;
+font-size: 50px;
+text-align:center;
+border-radius:5px;
+}
+.contact_1ri{
+border-bottom:1px solid #284e83;
+padding-bottom:20px;
+margin-top:20px; 
+ }
+.contact_2{
+margin-top:40px; 
+ }
+/*********************contact_end****************/
+
+@media screen and (max-width : 767px){
+#contact{
+ text-align:center;
+ }
+.contact_1l{
+padding:20px;
+ }
+.contact_1ri span{
+margin-bottom:15px; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.contact_1ri span {
+width: 40px;
+height: 40px;
+line-height: 38px;
+font-size:20px;
+}
+ }
+@media (min-width:992px) and (max-width:1200px) {
+
+  }
+@media (min-width:1201px) and (max-width:1350px) {
+
+ }
+

@@ -1,0 +1,97 @@
+/*
+Template Name: Deli Comp
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************register****************/
+#register{
+padding-top:40px;
+padding-bottom:40px; 
+}
+.register_1li h4{
+margin-top:15px;
+}
+.register_1li1l{
+margin-top:10px;  
+}
+.register_1li1l .form-control{
+margin-top:10px;
+border-radius:0;
+font-size:18px;
+height:45px;
+border-color:#ddd;
+box-shadow:none;
+}
+.register_1li1l .button_1{
+float:left;
+margin-right:10px; 
+}
+.register_1li1l .tick_box{
+display:inline-block;
+margin-top:20px;  
+}
+.check{
+vertical-align:text-top;
+}
+.register_1li1l h6{
+clear:left;
+margin-top:30px;  
+}
+
+.register_1li2{
+margin-top:10px;  
+}
+.register_1li2 p span{
+margin-left:10px;
+}
+.term{
+margin-top:15px;
+line-height:1.6em;
+}
+.login_page{
+margin-top:15px;
+}
+.c_text{
+color:#F69323;
+}
+
+.register_1log{
+ width:60%;
+ background:#f4f4f4;
+ padding:15px;
+ margin-left:auto;
+ margin-right:auto;
+ }
+/*********************register_end****************/
+
+
+@media screen and (max-width : 767px){
+#register{
+text-align:center;
+  }
+.register_1r {
+margin-top:15px; 
+ }
+.register_1log{
+ width:80%;
+ }
+.term{
+text-align:left; 
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.register_1log{
+ width:80%;
+ }
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.register_1log{
+ width:70%;
+ }
+  }
+@media (min-width:1201px) and (max-width:1350px) {
+
+ }

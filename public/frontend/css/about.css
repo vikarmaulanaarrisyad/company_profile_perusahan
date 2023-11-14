@@ -1,0 +1,146 @@
+/*
+Template Name: Deli Comp
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************about****************/
+#progress{
+background: #f4f4f4;
+padding-top:70px;
+padding-bottom:40px;
+  }
+.progress_1i{
+background:#fff;
+padding:40px 15px; 
+  }
+.progress_1i span i{
+background: #F69323;
+color:#fff;
+border-radius:50%;
+width:60px;
+height:60px;
+line-height:60px;
+font-size:30px; 
+  }
+.progress_1i span{
+display:block;
+margin-top:-75px; 
+margin-bottom:25px;
+  }
+.grow_1r h6 i{
+margin-right:5px;
+vertical-align:middle; 
+ }
+.grow_1r{
+padding-top:35px; 
+ }
+.price_o{
+background:#f4f4f4; 
+ }
+.price_1i{
+background:#fff; 
+ }
+
+#about_pg{
+padding-top:40px;
+padding-bottom:40px;
+background:#f4f4f4; 
+ }
+.about_pg1il span  a{
+border: 2px solid #F69323;
+width: 55px;
+height: 55px;
+line-height: 52px;
+display: inline-block;
+border-radius: 50%;
+text-align: center;
+font-size: 20px;
+color:#1F3F6B;
+}
+.about_pg1il span a:hover{
+background:#1F3F6B;
+color:#fff;
+display:block; 
+border: 2px solid #1F3F6B;
+ }
+.about_pg1{
+margin-top:40px; 
+ }
+
+/*********************about_end****************/
+
+@media screen and (max-width : 767px){
+.progress_1i {
+margin-top:50px; 
+ }
+#progress{
+padding-top:20px; 
+ }
+#grow {
+padding-top:15px;
+padding-bottom:15px; 
+ }
+.progress_1i p{
+text-align:left; 
+ }
+.about_pg1i{
+text-align:center; 
+ }
+.about_pg1ir{
+margin-top:10px; 
+ }
+.about_pg1ir p{
+text-align:left;
+ }
+.grow_1r h5{
+text-align:center;  
+ }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.grow_1l img{
+min-height:500px; 
+ }
+.grow_1r{
+padding:10px!important; 
+ }
+.grow_1r p{
+font-size:15px; 
+ }
+.grow_1r h3{
+font-size:26px; 
+ }
+
+.about_pg1il span  a{
+width: 35px;
+height: 35px;
+line-height: 32px;
+font-size: 16px;
+}
+ }
+@media (min-width:992px) and (max-width:1200px) {
+.grow_1l img{
+min-height:500px; 
+ }
+.grow_1r{
+padding:10px!important; 
+ }
+.grow_1r p{
+font-size:16px; 
+ }
+.grow_1r h3{
+font-size:26px; 
+ }
+.about_pg1il span  a{
+width: 45px;
+height: 45px;
+line-height: 42px;
+font-size: 18px;
+}
+  }
+@media (min-width:1201px) and (max-width:1350px) {
+
+ }
+
