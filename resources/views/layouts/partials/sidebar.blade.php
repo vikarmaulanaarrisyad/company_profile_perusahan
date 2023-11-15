@@ -68,7 +68,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('gallery.index') }}" class="nav-link {{ request()->is('gallery*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             Gallery

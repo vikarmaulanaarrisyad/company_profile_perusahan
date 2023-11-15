@@ -4,6 +4,7 @@ use App\Http\Controllers\{
     BannerController,
     CategoryController,
     DashboardController,
+    GaleryController,
     PostController,
     ServiceController,
     SettingController
@@ -47,6 +48,10 @@ Route::group([
     // Banner
     Route::get('banner/data', [BannerController::class, 'data'])->name('banner.data');
     Route::resource('banner', BannerController::class);
+
+    // Banner
+    Route::get('gallery/data', [GaleryController::class, 'data'])->name('gallery.data');
+    Route::resource('gallery', GaleryController::class);
 
     // Setting
     Route::resource('setting', SettingController::class);

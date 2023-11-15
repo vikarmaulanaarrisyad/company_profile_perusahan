@@ -37,6 +37,9 @@ class PostController extends Controller
             ->addColumn('author', function ($post) {
                 return $post->user->name;
             })
+            ->editColumn('body', function ($post) {
+                return substr($post->body, 100);
+            })
             ->addColumn('aksi', function ($post) {
                 return '
                 <button class="btn btn-sm btn-primary" onclick="editData(`' . route('post.show', $post->id) . '`)"><i class="fas fa-pencil-alt"></i></button>

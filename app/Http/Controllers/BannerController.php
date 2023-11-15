@@ -24,8 +24,11 @@ class BannerController extends Controller
 
         return datatables($banner)
             ->addIndexColumn()
-            ->editColumn('icon', function ($banner) {
+            ->editColumn('path_image', function ($banner) {
                 return '<img src="' . Storage::url($banner->path_image) . '" class="img-thumbnail">';
+            })
+            ->editColumn('description', function ($banner) {
+                return $banner->description;
             })
             ->addColumn('aksi', function ($banner) {
                 return '
