@@ -59,7 +59,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('banner.index') }}"
+                        class="nav-link {{ request()->is('banner*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-images"></i>
                         <p>
                             Banner

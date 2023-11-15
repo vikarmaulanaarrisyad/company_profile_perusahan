@@ -175,6 +175,6 @@ class PostController extends Controller
 
         $post->delete();
 
-        return response()->json(['data' => null, 'message' => 'Projek berhasil dihapus']);
+        return response()->json(['data' => null, 'message' => 'Postingan berhasil dihapus']);
     }
 }

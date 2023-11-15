@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\{
+    BannerController,
     CategoryController,
     DashboardController,
     PostController,
@@ -42,6 +43,10 @@ Route::group([
     //Service
     Route::get('service/data', [ServiceController::class, 'data'])->name('service.data');
     Route::resource('service', ServiceController::class);
+
+    // Banner
+    Route::get('banner/data', [BannerController::class, 'data'])->name('banner.data');
+    Route::resource('banner', BannerController::class);
 
     // Setting
     Route::resource('setting', SettingController::class);
