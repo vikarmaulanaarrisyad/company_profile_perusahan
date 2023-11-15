@@ -7,7 +7,8 @@ use App\Http\Controllers\{
     GaleryController,
     PostController,
     ServiceController,
-    SettingController
+    SettingController,
+    SubscriberController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,11 @@ Route::group([
     // Banner
     Route::get('gallery/data', [GaleryController::class, 'data'])->name('gallery.data');
     Route::resource('gallery', GaleryController::class);
+
+    // Subscriber
+    Route::get('/subscriber/data', [SubscriberController::class, 'data'])
+        ->name('subscriber.data');
+    Route::resource('/subscriber', SubscriberController::class)->only('index', 'destroy');
 
     // Setting
     Route::resource('setting', SettingController::class);
