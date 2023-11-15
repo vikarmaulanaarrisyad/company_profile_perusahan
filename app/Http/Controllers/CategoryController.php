@@ -116,4 +116,13 @@ class CategoryController extends Controller
 
         return response()->json(['message' => 'Kategori berhasil dihapus']);
     }
+
+    function search(Request $request)
+    {
+        $keyword = $request->get('q');
+
+        $category = Category::where('category_name', "LIKE", "%$keyword%")->get();
+
+        return $category;
+    }
 }

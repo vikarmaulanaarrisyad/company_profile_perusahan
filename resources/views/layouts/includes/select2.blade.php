@@ -7,7 +7,7 @@
     <script src="{{ asset('/AdminLTE/plugins/select2/js/select2.full.min.js') }}"></script>
 @endpush
 
-@push('scripts')
+{{--  @push('scripts')
     <script>
         $('.select2').select2({
             theme: 'bootstrap4',
@@ -21,4 +21,4 @@
             .css('margin-left', '.3rem')
             .css('margin-top', '.35rem');
     </script>
-@endpush
+@endpush  --}}

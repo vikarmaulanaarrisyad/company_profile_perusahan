@@ -3,6 +3,7 @@
 use App\Http\Controllers\{
     CategoryController,
     DashboardController,
+    PostController,
     SettingController
 };
 use Illuminate\Support\Facades\Route;
@@ -29,10 +30,14 @@ Route::group([
         ->name('dashboard');
 
     //Kategori
-
     Route::get('category/data', [CategoryController::class, 'data'])->name('category.data');
     Route::resource('category', CategoryController::class);
+    Route::get('/ajax/category/search', [CategoryController::class, 'search'])->name('category.search');
 
+
+    // Post
+    Route::get('post/data', [PostController::class, 'data'])->name('post.data');
+    Route::resource('post', PostController::class);
 
     // Setting
     Route::resource('setting', SettingController::class);

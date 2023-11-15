@@ -33,7 +33,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('category.index') }}" class="nav-link {{ request()->is('category*') ? 'active' : '' }}">
+                    <a href="{{ route('category.index') }}"
+                        class="nav-link {{ request()->is('category*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-cube"></i>
                         <p>
                             Kategori
@@ -41,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('post.index') }}" class="nav-link {{ request()->is('post*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-folder"></i>
                         <p>
                             Post
