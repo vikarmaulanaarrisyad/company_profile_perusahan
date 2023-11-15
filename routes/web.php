@@ -4,6 +4,7 @@ use App\Http\Controllers\{
     CategoryController,
     DashboardController,
     PostController,
+    ServiceController,
     SettingController
 };
 use Illuminate\Support\Facades\Route;
@@ -34,10 +35,13 @@ Route::group([
     Route::resource('category', CategoryController::class);
     Route::get('/ajax/category/search', [CategoryController::class, 'search'])->name('category.search');
 
-
     // Post
     Route::get('post/data', [PostController::class, 'data'])->name('post.data');
     Route::resource('post', PostController::class);
+
+    //Service
+    Route::get('service/data', [ServiceController::class, 'data'])->name('service.data');
+    Route::resource('service', ServiceController::class);
 
     // Setting
     Route::resource('setting', SettingController::class);
