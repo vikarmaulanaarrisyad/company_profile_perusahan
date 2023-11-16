@@ -28,25 +28,26 @@
 
     @include('layouts.partials.service_front')
 
-    @include('layouts.partials.work_front')
+    {{--  @include('layouts.partials.work_front')  --}}
 
-    @include('layouts.partials.project_front')
+    {{--  @include('layouts.partials.project_front')  --}}
 
-    @include('layouts.partials.faq_front')
+    {{--  @include('layouts.partials.faq_front')  --}}
 
-    @include('layouts.partials.choose_front')
+    {{--  @include('layouts.partials.choose_front')  --}}
 
-    @include('layouts.partials.price_front')
+    {{--  @include('layouts.partials.price_front')  --}}
+    @include('layouts.partials.blog_front')
+
 
     @include('layouts.partials.gallery_front')
 
-    @include('layouts.partials.quote_front')
+    {{--  @include('layouts.partials.quote_front')  --}}
 
-    @include('layouts.partials.team_front')
+    {{--  @include('layouts.partials.team_front')  --}}
 
-    @include('layouts.partials.testimonial_front')
+    {{--  @include('layouts.partials.testimonial_front')  --}}
 
-    @include('layouts.partials.blog_front')
 
     @include('layouts.partials.subs_front')
 

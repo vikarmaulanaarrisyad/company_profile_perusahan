@@ -28,7 +28,7 @@
                                         <label for="auth">Username</label>
                                         <input type="text" class="form-control @error('auth') is-invalid @enderror"
                                             id="auth" name="auth" value="{{ old('auth') }}"
-                                            placeholder="Masukan username" autocomplete="off">
+                                            placeholder="Masukan username" autocomplete="off" value="support@company.com">
 
                                         @error('auth')
                                             <span class="invalid-feedback">

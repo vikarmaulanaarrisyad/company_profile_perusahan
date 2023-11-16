@@ -68,7 +68,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('gallery.index') }}" class="nav-link {{ request()->is('gallery*') ? 'active' : '' }}">
+                    <a href="{{ route('gallery.index') }}"
+                        class="nav-link {{ request()->is('gallery*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             Gallery
@@ -76,7 +77,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('subscriber.index') }}" class="nav-link {{ request()->is('subscriber*') ? 'active' : '' }}">
+                    <a href="{{ route('subscriber.index') }}"
+                        class="nav-link {{ request()->is('subscriber*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user-plus"></i>
                         <p>
                             Subscriber
@@ -84,21 +86,22 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('about.index') }}"
+                        class="nav-link {{ request()->is('about*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-bookmark"></i>
                         <p>
                             About
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{--  <li class="nav-item">
                     <a href="" class="nav-link {{ request()->is('admin/contact*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-envelope"></i>
                         <p>
                             Kontak Masuk
                         </p>
                     </a>
-                </li>
+                </li>  --}}
                 <li class="nav-header">SISTEM</li>
                 <li class="nav-item">
                     <a href="{{ route('setting.index') }}"

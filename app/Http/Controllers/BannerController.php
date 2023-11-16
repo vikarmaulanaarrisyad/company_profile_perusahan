@@ -27,9 +27,6 @@ class BannerController extends Controller
             ->editColumn('path_image', function ($banner) {
                 return '<img src="' . Storage::url($banner->path_image) . '" class="img-thumbnail">';
             })
-            ->editColumn('description', function ($banner) {
-                return $banner->description;
-            })
             ->addColumn('aksi', function ($banner) {
                 return '
                 <button class="btn btn-sm btn-primary" onclick="editData(`' . route('banner.show', $banner->id) . '`)"><i class="fas fa-pencil-alt"></i></button>

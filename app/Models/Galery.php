@@ -8,4 +8,10 @@ class Galery extends Model
 {
     use HasFactory;
     protected $table = 'gallery_images';
+
+    // Define a scope for retrieving random records
+    public function scopeRandom($query)
+    {
+        return $query->inRandomOrder()->limit(3);
+    }
 }

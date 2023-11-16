@@ -5,11 +5,11 @@
                   <div class="col-sm-4 space_left">
                       <div class="footer_1i clearfix">
                           <h2 class="mgt big"><a class="col_1" href="index.html"><i class="fa fa-truck col_1"></i><span
-                                      class="col">Deli</span>Comp</a></h2>
-                          <p class="col_3">We are many variations of passages available but the majority have
-                              suffered alteration in some form by injected humour words which don't look even slightly
-                              believable.</p>
-                          <ul class="social-network social-circle">
+                                      class="col" style="font-size: 25px">{{ $setting->company_name }}</a></h2>
+                          <p class="col_3">
+                              {!! $setting->about !!}
+                          </p>
+                          <ul class="social-network social-circle" style="display: none">
                               <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a>
                               </li>
                               <li><a href="#" class="icoFacebook" title="Facebook"><i
@@ -27,16 +27,16 @@
                       <div class="footer_1i1 clearfix">
                           <h4 class="col mgt">Contact Us</h4>
                           <hr class="hr_1 mgl">
-                          <p class="col_3"><i class="fa fa-map-marker col_1"></i> 172 - Kingdom Oxford Street</p>
-                          <p class="col_3"><i class="fa fa-phone col_1"></i> <a class="col" href="#">(+00)
-                                  123-456-789</a></p>
+                          <p class="col_3"><i class="fa fa-map-marker col_1"></i> {{ $setting->address }}</p>
+                          <p class="col_3"><i class="fa fa-phone col_1"></i> <a class="col"
+                                  href="#">{{ $setting->phone }}</a></p>
                           <p class="col_3"><i class="fa fa-envelope col_1"></i> <a class="col"
-                                  href="#">info@gmail.com</a></p>
-                          <p class="col_3"><i class="fa fa-clock-o col_1"></i> Sun - Fri (09AM - 08PM)</p>
+                                  href="#">{{ $setting->email }}</a></p>
+                          <p class="col_3"><i class="fa fa-clock-o col_1"></i> {{ $setting->phone_hours }}</p>
                       </div>
                   </div>
                   <div class="col-sm-2 space_left">
-                      <div class="footer_1i1 clearfix">
+                      <div class="footer_1i1 clearfix" style="display: none">
                           <h4 class="col mgt">Quick Links</h4>
                           <hr class="hr_1 mgl">
                           <h5 class="normal"><i class="fa fa-caret-right col_1"></i> <a href="#"> About
@@ -56,9 +56,13 @@
                           <h4 class="col mgt">Newsletter</h4>
                           <hr class="hr_1 mgl">
                           <p class="col_3">Subscribe Our Newsletter To Get Latest Update And News</p>
-                          <input class="form-control" placeholder="Enter email here" type="text">
-                          <h6 class="big"><a class="button" href="#"><i class="fa fa-paper-plane"></i>
-                                  Subscribe Now</a></h6>
+                          <form action="{{ url('/subscriber') }}" method="post">
+                              @csrf
+                              <input class="form-control" placeholder="Enter email here" type="email" name="email" autocomplete="off">
+                              <h6 class="big"><button class="button" style="border: none"><i class="fa fa-paper-plane"></i>
+                                      Subscribe Now</button></h6>
+                          </form>
+
                       </div>
                   </div>
               </div>

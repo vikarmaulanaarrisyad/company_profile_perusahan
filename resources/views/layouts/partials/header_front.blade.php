@@ -9,35 +9,37 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="col_1 navbar-brand" href="index.html"><i class="fa fa-truck col_1"></i><span
+                <a class="col_1 navbar-brand" href="{{ url('/') }}"><i class="fa fa-truck col_1"></i><span
                         class="col_4">Deli</span>Comp</a>
             </div>
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a class="m_tag active_tab" href="index.html">Home</a></li>
-                    <li><a class="m_tag" href="about.html">About</a></li>
-                    <li class="dropdown">
+                    <li><a class="m_tag {{ request()->is('/') ? 'active_tab' : '' }}"
+                            href="{{ url('/') }}">Home</a></li>
+                    <li><a class="m_tag" href="#about_h">About</a>
+                    </li>
+                    {{--  <li class="dropdown">
                         <a class="m_tag" href="#" data-toggle="dropdown" role="button"
                             aria-expanded="false">Blog<span class="caret"></span></a>
                         <ul class="dropdown-menu drop_3" role="menu">
                             <li><a href="blog.html">Blog</a></li>
                             <li><a class="border_none" href="blog_detail.html">Blog Detail</a></li>
                         </ul>
+                    </li>  --}}
+                    <li><a class="m_tag" href="#serv_h">Services</a></li>
+                    <li><a class="m_tag" href="#gallery">Gallery</a></li>
+                    {{--  <li><a class="m_tag" href="pricing.html">Pricing</a></li>  --}}
+                    <li><a class="m_tag @if (request()->is('#blog_h')) active_tab @endif" href="#blog_h">Berita</a>
                     </li>
-                    <li><a class="m_tag" href="services.html">Services</a></li>
-                    <li><a class="m_tag" href="gallery.html">Gallery</a></li>
-                    <li><a class="m_tag" href="pricing.html">Pricing</a></li>
-                    <li><a class="m_tag" href="contact.html">Contact</a></li>
-                    <li class="dropdown">
+                    {{--  <li class="dropdown">
                         <a class="m_tag" href="#" data-toggle="dropdown" role="button"
                             aria-expanded="false">Pages<span class="caret"></span></a>
                         <ul class="dropdown-menu drop_3" role="menu">
                             <li><a href="register.html">Register</a></li>
                             <li><a class="border_none" href="{{ route('login') }}">Login</a></li>
                         </ul>
-                    </li>
+                    </li>  --}}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown"><a class="m_tag" href="#" data-toggle="dropdown"><span

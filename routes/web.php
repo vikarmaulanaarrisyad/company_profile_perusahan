@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\{
+    AboutController,
     BannerController,
     CategoryController,
     DashboardController,
@@ -9,6 +10,10 @@ use App\Http\Controllers\{
     ServiceController,
     SettingController,
     SubscriberController
+};
+use App\Http\Controllers\Front\{
+    FrontController,
+    FrontSubcriberController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +28,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontController::class, 'index']);
+Route::post('/subscriber', [FrontSubcriberController::class, 'store']);
 
 Route::group([
     'middleware' => ['auth', 'role:admin'],
@@ -58,6 +62,11 @@ Route::group([
     Route::get('/subscriber/data', [SubscriberController::class, 'data'])
         ->name('subscriber.data');
     Route::resource('/subscriber', SubscriberController::class)->only('index', 'destroy');
+
+    // About
+    Route::get('/about/data', [AboutController::class, 'data'])
+        ->name('about.data');
+    Route::resource('/about', AboutController::class)->only('index', 'destroy', 'update','show');
 
     // Setting
     Route::resource('setting', SettingController::class);

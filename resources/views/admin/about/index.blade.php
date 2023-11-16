@@ -1,20 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Pelayanan')
+@section('title', 'About Me')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12 col-sm-12">
             <x-card>
-                <x-slot name="header">
-                    <button onclick="addData(`{{ route('banner.store') }}`)" class="btn btn-primary btn-sm"><i
-                            class="fas fa-plus-circle"></i> Tambah Data</button>
-                </x-slot>
-
-                <x-table class="banner">
+                <x-table class="about">
                     <x-slot name="thead">
                         <th>No</th>
-                        <th width="20%"></th>
                         <th>Judul</th>
                         <th>Aksi</th>
                     </x-slot>
@@ -22,7 +16,7 @@
             </x-card>
         </div>
     </div>
-    @include('admin.banner.form')
+    @include('admin.about.form')
 @endsection
 
 @include('layouts.includes.datatables')
@@ -40,7 +34,7 @@
     </script>
 
     <script>
-        table = $('.banner').DataTable({
+        table = $('.about').DataTable({
             processing: true,
             serverSide: true,
             autoWidth: false,
@@ -50,7 +44,7 @@
                 "processing": "Mohon bersabar..."
             },
             ajax: {
-                url: '{{ route('banner.data') }}',
+                url: '{{ route('about.data') }}',
             },
             columns: [{
                     data: 'DT_RowIndex',
@@ -58,16 +52,11 @@
                     sortable: false
                 },
                 {
-                    data: 'path_image',
-                    searchable: false,
-                    sortable: false,
-                },
-                {
-                    data: 'slider_title',
+                    data: 'title',
                     searchable: false,
                     sortable: false
                 },
-
+                
                 {
                     data: 'aksi',
                     sortable: false,
@@ -78,7 +67,7 @@
     </script>
 
     <script>
-        function addData(url, title = 'Tambah Pelayanan') {
+        function addData(url, title = 'Tambah Gallery') {
             $(modal).modal('show');
             $(`${modal} .modal-title`).text(title);
             $(`${modal} form`).attr('action', url);
@@ -89,7 +78,7 @@
             resetForm(`${modal} form`);
         }
 
-        function editData(url, title = "Edit Pelayanan") {
+        function editData(url, title = "Edit Gallery") {
             $.get(url)
                 .done(response => {
                     $(modal).modal('show');
