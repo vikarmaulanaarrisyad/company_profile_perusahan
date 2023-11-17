@@ -1,9 +1,9 @@
 <aside class="main-sidebar elevation-4 sidebar-light-danger">
 
     <a href="index3.html" class="brand-link bg-danger">
-        <img src="{{ asset('AdminLTE') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+        <img src="{{ Storage::url($setting->path_image ?? '') }}" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">{{ $setting->company_name ?? config('app.name') }}</span>
     </a>
 
     <div class="sidebar">

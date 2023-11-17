@@ -4,8 +4,9 @@
             <div class="top_1 clearfix">
                 <div class="col-sm-3">
                     <div class="top_1l clearfix">
-                        <h2 class="mgt big"><a class="col_1" href="index.html"><i class="fa fa-truck col_1"></i><span
-                                    class="col_4" style="font-size: 22px">{{ $setting->company_name }}</span></a></h2>
+                        <h2 class="mgt big"><a class="col_1" href="{{ url('/') }}"></i><span class="col_4"
+                                    style="font-size: 25px;">{{ $setting->company_name }}</span></a>
+                        </h2>
                     </div>
                 </div>
                 <div class="col-sm-9">

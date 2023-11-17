@@ -45,3 +45,5 @@
 @endsection
 
 @includeIf('includes.summernote')
+
+<x-notif></x-notif>

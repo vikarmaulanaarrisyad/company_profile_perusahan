@@ -7,7 +7,7 @@
             <div class="col-lg-4">
                 <strong class="d-block text-center">Favicon</strong>
                 <div class="text-center">
-                    <img src="{{ url($setting->path_image ?? '') }}" alt=""
+                    <img src="{{ Storage::url($setting->path_image ?? '') }}" alt=""
                         class="img-thumbnail preview-path_image" width="200">
                 </div>
                 <div class="form-group mt-3">
@@ -20,9 +20,9 @@
             </div>
             <div class="col-lg-2"></div>
             <div class="col-lg-4">
-                <strong class="d-block text-center">Header</strong>
+                <strong class="d-block text-center">Logo Perusahaan</strong>
                 <div class="text-center">
-                    <img src="{{ url($setting->path_image_header ?? '') }}" alt=""
+                    <img src="{{ Storage::url($setting->path_image_header ?? '') }}" alt=""
                         class="img-thumbnail preview-path_image_header" width="200">
                 </div>
                 <div class="form-group mt-3">
@@ -38,7 +38,7 @@
             <div class="col-lg-4">
                 <strong class="d-block text-center">Footer</strong>
                 <div class="text-center">
-                    <img src="{{ url($setting->path_image_footer ?? '') }}" alt=""
+                    <img src="{{ Storage::url($setting->path_image_footer ?? '') }}" alt=""
                         class="img-thumbnail preview-path_image_footer" width="200">
                 </div>
                 <div class="form-group mt-3">

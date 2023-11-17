@@ -4,7 +4,7 @@
               <div class="footer_1 clearfix">
                   <div class="col-sm-4 space_left">
                       <div class="footer_1i clearfix">
-                          <h2 class="mgt big"><a class="col_1" href="index.html"><i class="fa fa-truck col_1"></i><span
+                          <h2 class="mgt big"><a class="col_1" href="{{ url('/') }}"><span
                                       class="col" style="font-size: 25px">{{ $setting->company_name }}</a></h2>
                           <p class="col_3">
                               {!! $setting->about !!}

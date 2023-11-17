@@ -13,8 +13,8 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <a href="{{ url('/') }}">
-                                    <img src="{{ asset('assets/image/evoting.jpg') }}" alt="" class="w-50 mb-4"
-                                        style="margin-left: auto; margin-right: auto;">
+                                    <img src="{{ Storage::url($setting->path_image_header) }}" alt=""
+                                        class="w-50 mb-4" style="margin-left: auto; margin-right: auto;">
                                 </a>
                                 <h4 class="login-heading text-bold text-center">
                                     {{ $setting->company_name ?? '' }}</h4>
