@@ -24,26 +24,15 @@
                                     <h6 class="col_2"><span class="span_1 col_1"><i class="fa fa-calendar"></i></span>
                                         {{ tanggal_indonesia($post->created_at) }}
                                         {{--  <span class="span_2 col_1"><i class="fa fa-comment-o"></i></span> 25  --}}
-                                        <span class="span_2 col_1"><i class="fa fa-eye"></i></span> 15
+                                        {{--  <span class="span_2 col_1"><i class="fa fa-eye"></i></span> 15  --}}
                                     </h6>
                                     <p>
 
-                                        {!! Str::limit($post->body, 100, ' ...') !!}
+                                        {!! Str::limit($post->body, 200) !!}
                                     </p>
-                                    <ul class="social-network social-circle" style="display: none;">
-                                        <li><a href="#" class="icoRss" title="Rss"><i
-                                                    class="fa fa-rss"></i></a>
-                                        </li>
-                                        <li><a href="#" class="icoFacebook" title="Facebook"><i
-                                                    class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#" class="icoTwitter" title="Twitter"><i
-                                                    class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#" class="icoGoogle" title="Google +"><i
-                                                    class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i
-                                                    class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    <h6 class="big"><a class="button_1" href="#">Read More <i
+
+                                    <h6 class="big"><a class="button_1"
+                                            href="{{ route('blog.detail', $post->slug) }}">Read More <i
                                                 class="fa fa-long-arrow-right"></i></a></h6>
                                 </div>
                             </div>

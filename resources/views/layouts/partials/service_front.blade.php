@@ -9,7 +9,7 @@
                      {{--  <p>...</p>  --}}
                  </div>
              </div>
-             @foreach ($services as $service)
+             {{--  @foreach ($services as $service)
                  <div class="serv_h2 clearfix">
                      <div class="col-sm-3 space_left">
                          <div class="serv_h2i text-center clearfix">
@@ -17,14 +17,31 @@
                              <hr class="hr_1">
                              <h4><a href="#">{{ $service->title }}</a></h4>
                              <p>
-                                 {!! Str::limit( $service->description, 30, ' ...') !!}
+                                 {!! Str::limit($service->description, 30, ' ...') !!}
                              </p>
                              <h5 class="big"><a class="button_1" href="#">Read More <i
                                          class="fa fa-long-arrow-right"></i></a></h5>
                          </div>
                      </div>
                  </div>
-             @endforeach
+             @endforeach  --}}
+
+
+             <div class="serv_h2 clearfix">
+                 @foreach ($services as $service)
+                     <div class="col-sm-4 space_left">
+                         <div class="serv_h2i text-center clearfix">
+                             <span><i class="{{ $service->icon }}"></i></span>
+                             <hr class="hr_1">
+                             <h4><a href="#">{{ $service->title }}</a></h4>
+                             <p>
+                                 {!! Str::limit($service->description, 10, '....') !!}
+                             </p>
+
+                         </div>
+                     </div>
+                 @endforeach
+             </div>
          </div>
      </div>
  </section>

@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="col_1 navbar-brand" href="{{ url('/') }}"><i class="fa fa-truck col_1"></i><span
-                        class="col_4">Deli</span>Comp</a>
+                        class="col_4">{{ $setting->company_name ?? '' }}</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

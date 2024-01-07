@@ -28,6 +28,21 @@ class FrontController extends Controller
         $gallery = Galery::random()->get();
         $about = About::first();
 
-        return view('welcome', compact('posts', 'services', 'sliders', 'gallery', 'about'));
+        // return view('welcome', compact('posts', 'services', 'sliders', 'gallery', 'about'));
+        return view('landingpage');
+    }
+
+    function detailBlog($slug)
+    {
+        $post = Post::where('slug', $slug)->first();
+        $services = Service::orderBy('id', 'DESC')
+            ->limit(4)
+            ->get();
+
+        $sliders = Banner::all();
+
+        $gallery = Galery::random()->get();
+
+        return view('blog_detail_front', compact('post', 'services', 'sliders', 'gallery',));
     }
 }

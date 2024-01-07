@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pelayanan')
+@section('title', 'Banner')
 
 @section('content')
     <div class="row">
@@ -78,7 +78,7 @@
     </script>
 
     <script>
-        function addData(url, title = 'Tambah Pelayanan') {
+        function addData(url, title = 'Tambah Banner') {
             $(modal).modal('show');
             $(`${modal} .modal-title`).text(title);
             $(`${modal} form`).attr('action', url);
@@ -89,7 +89,7 @@
             resetForm(`${modal} form`);
         }
 
-        function editData(url, title = "Edit Pelayanan") {
+        function editData(url, title = "Edit Banner") {
             $.get(url)
                 .done(response => {
                     $(modal).modal('show');

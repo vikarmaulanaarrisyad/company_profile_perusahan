@@ -27,7 +27,6 @@
                         <th>No</th>
                         <th width="20%"></th>
                         <th>Judul</th>
-                        <th>Body</th>
                         <th>Status</th>
                         <th>Author</th>
                         <th>Aksi</th>
@@ -85,11 +84,7 @@
                     searchable: false,
                     sortable: false
                 },
-                {
-                    data: 'body',
-                    searchable: false,
-                    sortable: false
-                },
+
                 {
                     data: 'status',
                     searchable: false,

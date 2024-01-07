@@ -6,8 +6,9 @@
                     <h4 class="col_1 mgt">GALLERY</h4>
                     <h2 class="col_4">Photo Gallery</h2>
                     <hr class="hr_1">
-                    <p>It is a long established fact that a reader will be distracted by the readable <br> content
-                        of a page when looking at its layout.</p>
+                    <p>
+                        Photo Gallery Seputar {{ $setting->company_name }}.
+                    </p>
                 </div>
             </div>
             <div class="gallery_1 clearfix">

@@ -37,12 +37,10 @@ class PostController extends Controller
             ->addColumn('author', function ($post) {
                 return $post->user->name;
             })
-            ->editColumn('body', function ($post) {
-                return substr($post->body, 100);
-            })
             ->addColumn('aksi', function ($post) {
                 return '
-                <button class="btn btn-sm btn-primary" onclick="editData(`' . route('post.show', $post->id) . '`)"><i class="fas fa-pencil-alt"></i></button>
+                <a href="' . route('post.detail', $post->id) . '" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                <button class="btn btn-sm btn-warning" onclick="editData(`' . route('post.show', $post->id) . '`)"><i class="fas fa-pencil-alt"></i></button>
                 <button class="btn btn-sm btn-danger" onclick="deleteData(`' . route('post.destroy', $post->id) . '`,`' . $post->post_title . '`)"><i class="fas fa-trash"></i></button>
                 ';
             })
@@ -114,9 +112,9 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post)
+    public function detail(Request $request, Post $post)
     {
-        //
+        return view('admin.post.show', compact(['post']));
     }
 
     /**

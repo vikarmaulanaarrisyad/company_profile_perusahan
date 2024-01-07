@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index']);
 Route::post('/subscriber', [FrontSubcriberController::class, 'store']);
+Route::get('/berita/{slug}', [FrontController::class, 'detailBlog'])->name('blog.detail');
 
 Route::group([
     'middleware' => ['auth', 'role:admin'],
@@ -44,7 +45,8 @@ Route::group([
 
     // Post
     Route::get('post/data', [PostController::class, 'data'])->name('post.data');
-    Route::resource('post', PostController::class);
+    Route::resource('post', PostController::class)->except('edit');
+    Route::get('post/{post}/detail', [PostController::class, 'detail'])->name('post.detail');
 
     //Service
     Route::get('service/data', [ServiceController::class, 'data'])->name('service.data');
@@ -66,7 +68,7 @@ Route::group([
     // About
     Route::get('/about/data', [AboutController::class, 'data'])
         ->name('about.data');
-    Route::resource('/about', AboutController::class)->only('index', 'destroy', 'update','show');
+    Route::resource('/about', AboutController::class)->only('index', 'destroy', 'update', 'show');
 
     // Setting
     Route::resource('setting', SettingController::class);
