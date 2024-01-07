@@ -28,8 +28,8 @@ class FrontController extends Controller
         $gallery = Galery::random()->get();
         $about = About::first();
 
-        // return view('welcome', compact('posts', 'services', 'sliders', 'gallery', 'about'));
-        return view('landingpage');
+        return view('welcome', compact('posts', 'services', 'sliders', 'gallery', 'about'));
+        // return view('landingpage');
     }
 
     function detailBlog($slug)
